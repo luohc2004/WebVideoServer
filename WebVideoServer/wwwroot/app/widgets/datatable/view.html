@@ -14,7 +14,7 @@
         </tr>
     </thead>
     <tbody data-bind="foreach: {data: rows, as: 'row'}">
-        <tr data-bind="foreach: {data: $parent.columnsKeys, as: 'key'}">
+        <tr data-bind="foreach: {data: $parent.columnsKeys, as: 'key'},click:$parent.clickRow">
             <td data-bind="attr: {'class': key }, text: $parentContext.$parents[0]._(key, row[key])"></td>
         </tr>
     </tbody>
