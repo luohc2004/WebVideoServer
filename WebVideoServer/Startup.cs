@@ -34,7 +34,7 @@ namespace WebVideoServer
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+            app.UseMvc().UseStaticFiles();
         }
     }
 }
