@@ -15,7 +15,7 @@
         </tr>
     </thead>
     <tbody class="grid-body" data-bind="foreach: { data: rows, as: 'row' }" data-part="body">
-        <tr data-bind="foreach: $parent.columns">
+        <tr data-bind="foreach: $parent.columns,click:$parent.onSelect">
             <td data-bind="text: $parents[1].getColumnText($data, row)"></td>
         </tr>
     </tbody>

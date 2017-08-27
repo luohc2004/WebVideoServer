@@ -8,7 +8,10 @@
             });
         }
         this.gridConfig = {
-            data: data
+            data: data,
+            onRowSelect:function (row) {
+              alert('going to navigate to video'+row._id);          
+            }
         };
     }
     return ctor;

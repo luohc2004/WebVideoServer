@@ -3,7 +3,7 @@
  * Available via the MIT license.
  * see: https://github.com/tyrsius/durandal-grid for details.
  */
-define(['durandal/app', 'knockout', 'jquery'], function (app, ko, $) {
+define(['durandal/app', 'knockout', 'jquery','durandal/system'], function (app, ko, $,system) {
 
 
     //====================== Support Code and Polyfills =====================//
@@ -230,6 +230,13 @@ define(['durandal/app', 'knockout', 'jquery'], function (app, ko, $) {
             deferEvaluation: true
         });
 
+        //Row select
+        self.onSelect=function(row){
+         var onRowSelect=   config.onRowSelect||function(row){};
+         onRowSelect(row);
+            system.log  ("grid has selected:",row);
+        }
+        
         //This is a safety check. if the page size puts the current pageIndex out of bounds, go to the last page
         //This can hapen when the page size grows
         self.lastPageIndex.subscribe(function (newValue) {
