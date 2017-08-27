@@ -8,8 +8,8 @@
         },
         activate: function () {
             router.map([
-                { route: '', title:'Welcome', moduleId: 'viewmodels/welcome', nav: true },
-                { route: 'flickr', moduleId: 'viewmodels/flickr', nav: true }
+                { route: '', title:'视频列表', moduleId: 'viewmodels/welcome', nav: true },
+                { route: 'detail/:_id', moduleId: 'viewmodels/detail', nav: false }
             ]).buildNavigationModel();
             
             return router.activate();
