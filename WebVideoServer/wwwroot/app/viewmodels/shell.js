@@ -9,6 +9,7 @@
         activate: function () {
             router.map([
                 { route: '', title:'视频列表', moduleId: 'viewmodels/welcome', nav: true },
+                { route: 'upload', title:'上传', moduleId: 'viewmodels/upload', nav: true },
                 { route: 'detail/:_id', moduleId: 'viewmodels/detail', nav: false }
             ]).buildNavigationModel();
             

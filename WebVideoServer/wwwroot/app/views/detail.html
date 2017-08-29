@@ -1,4 +1,6 @@
-﻿<div>
+﻿<section>
 	<h3 data-bind="text:title"></h3>
-	<video data-bind="src:videoUrl"></video>
-</div>
+	<div class="videoContainer">
+		<video data-bind="attr:{src:videoUrl}" autoplay="true" controls="true" width="100%">该浏览器不支持H5标签</video>
+	</div>
+</section>

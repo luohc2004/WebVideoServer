@@ -7,7 +7,12 @@
     self.title='';
     self.videoUrl='';
     self.activate=function (_id) {
-        title=_id;
+        if (app.isDebug) {
+            self.title='视频'+_id+' 【'+'2017-08-21】';
+            self.videoUrl='/Videos/1.mp4';
+        }else{
+            //get data from server
+        }
     };
     self.canDeactivate=function () {
             //the router's activator calls this function to see if it can leave the screen

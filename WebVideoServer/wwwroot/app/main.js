@@ -18,7 +18,8 @@
 
 define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'bootstrap'], function (system, app, viewLocator) {
     //>>excludeStart("build", true);
-    system.debug(true);
+    //全局调试变量
+    app.isDebug=  system.debug(true);
     //>>excludeEnd("build");
 
     app.title = '天天学舞蹈';

@@ -1,4 +1,13 @@
 ﻿<section>
-    <h2 data-bind="text:displayName"></h2>
-    <table class="paging-container grid-table" data-bind="grid: gridConfig"></table>
+	<table class="table paging-container" data-bind="grid: gridConfig">
+		<tbody data-part="body" data-bind="foreach: { data: rows, as: 'row' }">
+			<tr>
+				<td data-bind="text: _id"></td>
+				<td data-bind="text: title"></td>
+				<td data-bind="text: 上传日期"></td>
+				<td data-bind="text: 拍摄日期"></td>
+				<td><a class="btn btn-xs btn-primary" data-bind="attr:{href:'#detail/'+_id} "><span class="glyphicon glyphicon-play" aria-hidden="true"></span></a></td>
+			</tr>
+		</tbody>
+	</table> 
 </section>

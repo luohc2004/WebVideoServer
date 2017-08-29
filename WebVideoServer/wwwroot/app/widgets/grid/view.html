@@ -1,8 +1,8 @@
-﻿<table data-bind="css: gridClasses">
+﻿<table class="table table-striped table-hover">
     <thead class="grid-columns" data-part="header">
-        <tr data-bind="if: showSearchBox" data-part="search" class="grid-search">
+        <tr data-bind="if: showSearchBox" data-part="search" >
             <td data-bind="attr: { colspan: columns().length }">
-                <input placeholder="Search..." type="search" name="search" data-bind="value: query, valueUpdate: 'keyup'" />
+                <input placeholder="Search..." type="search" name="search" data-bind="value: query, valueUpdate: 'keyup'" class="span2 search-query"/>
             </td>
         </tr>
         <tr class="grid-column" data-part="headerRow" data-bind="foreach: columns">
@@ -15,7 +15,7 @@
         </tr>
     </thead>
     <tbody class="grid-body" data-bind="foreach: { data: rows, as: 'row' }" data-part="body">
-        <tr data-bind="foreach: $parent.columns,click:$parent.onSelect">
+        <tr data-bind="foreach: $parent.columns">
             <td data-bind="text: $parents[1].getColumnText($data, row)"></td>
         </tr>
     </tbody>

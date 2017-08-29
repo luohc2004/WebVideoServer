@@ -4,7 +4,7 @@
  * see: http://durandaljs.com or https://github.com/BlueSpire/Durandal for details
  */
 
-.splash {
+ .splash {
     text-align: center;
     margin: 10% 0 0 0;
 }
@@ -48,6 +48,14 @@ section {
     visibility: visible;
 }
 
-.pictureDetail {
-    max-width: 425px;
+.videoContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;    
+}
+
+.videoContainer video{
+    min-width: 100%;
+    min-height: 100%;
 }
